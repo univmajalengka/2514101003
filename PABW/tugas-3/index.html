@@ -1,153 +1,186 @@
 <!doctype html>
 <html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>D I P I C A F E</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <!-- Menu Navigasi -->
-    <nav class="navbar">
-      <div class="logo-container">
-        <img src="assets/logo.jpg" alt="Logo DIPI CAFE" class="nav-logo" />
-        <span class="logo-text">DIPI CAFE</span>
-      </div>
-      <ul class="nav-links">
-        <li><a href="#beranda">Beranda</a></li>
-        <li><a href="#kegiatan">Fasilitas & Spot</a></li>
-        <li><a href="#menu-lengkap">Daftar Menu</a></li>
-        <li><a href="#sosmed">Sosial Media</a></li>
-      </ul>
-    </nav>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#a93636">
+  <meta name="description" content="DIPI CAFE — Sip, Eat, Repeat. Temukan menu dan kunjungi kami.">
+  <title>DIPI CAFE — Sip, Eat, Repeat</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a class="logo-container" href="#beranda" aria-label="DIPI CAFE, kembali ke beranda">
+      <img src="assets/logo.jpg" alt="Logo DIPI CAFE" class="nav-logo">
+      <span class="logo-text">DIPI <span>CAFE</span></span>
+    </a>
 
-    <!-- Header / Hero Section -->
-    <header id="beranda" class="hero">
-      <div class="hero-overlay">
-        <h2 class="welcome-text">Welcome to</h2>
-        <h1 class="brand-text">Dipi Cafe</h1>
-        <p class="tagline">Sip &bull; Eat &bull; Repeat</p>
-        <a href="#menu-lengkap" class="btn btn-hero">Lihat Menu Kami</a>
-      </div>
-    </header>
+    <button class="menu-toggle" id="menuToggle" aria-label="Buka navigasi" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
 
-    <!-- Fasilitas & Spot Foto Gallery -->
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#beranda">Beranda</a></li>
+      <li><a href="#kegiatan">Fasilitas & Spot</a></li>
+      <li><a href="#menu-lengkap">Daftar Menu</a></li>
+      <li><a href="#lokasi">Lokasi</a></li>
+      <li><a href="#sosmed">Kontak</a></li>
+    </ul>
+    <button class="cart-nav-button" id="openCartButton" aria-label="Buka keranjang">
+      <span aria-hidden="true">🛒</span><span class="cart-nav-label">Keranjang</span>
+      <span class="cart-count" id="cartCount">0</span>
+    </button>
+  </nav>
+
+  <header id="beranda" class="hero">
+    <div class="hero-shade"></div>
+    <div class="hero-overlay">
+      <p class="eyebrow">Tempat singgah, cerita, dan rasa</p>
+      <h1>DIPI <span>CAFE</span></h1>
+      <p class="tagline">Sip <i>•</i> Eat <i>•</i> Repeat</p>
+      <p class="hero-description">Temukan teman untuk setiap suasana — dari secangkir kopi sampai makanan favoritmu.</p>
+      <div class="hero-actions">
+        <a href="#menu-lengkap" class="btn btn-primary">Jelajahi Menu <span>↓</span></a>
+        <a href="#lokasi" class="btn btn-outline">Temukan Lokasi</a>
+      </div>
+    </div>
+    <div class="hero-note">GOOD FOOD · GOOD MOOD</div>
+  </header>
+
+  <main>
     <section id="kegiatan" class="section-container">
-      <h2>Sudut Nyaman & Spot Estetik</h2>
-      <p class="subtitle">
-        Temukan spot favoritmu untuk bersantai, nugas, hingga mengabadikan momen.
-      </p>
-
+      <div class="section-heading">
+        <p class="eyebrow">A little place to unwind</p>
+        <h2>Sudut Nyaman & Spot Estetik</h2>
+        <p class="subtitle">Temukan spot favoritmu untuk bersantai, nugas, hingga mengabadikan momen.</p>
+      </div>
       <div class="gallery">
-        <div class="gallery-item">
-          <img
-            src="assets/mirror.jpg"
-            alt="Spot Mirror Selfie Indoor"
-            loading="lazy"
-          />
-          <p>Mirror Selfie Area</p>
+        <article class="gallery-item"><img src="assets/mirror.jpg" alt="Spot mirror selfie indoor" loading="lazy"><p>Mirror Selfie Area</p></article>
+        <article class="gallery-item"><img src="assets/convex-mirror.jpg" alt="Spot cermin cembung outdoor" loading="lazy"><p>Outdoor Convex Mirror</p></article>
+        <article class="gallery-item"><img src="assets/indoor.jpg" alt="Area indoor DIPI CAFE" loading="lazy"><p>Cozy Indoor Space</p></article>
+        <article class="gallery-item"><img src="assets/outdoor.jpg" alt="Area outdoor malam" loading="lazy"><p>Chill Outdoor Vibes</p></article>
+        <article class="gallery-item"><img src="assets/clean.jpg" alt="Area kafe yang bersih" loading="lazy"><p>Clean & Comfy Area</p></article>
+        <article class="gallery-item"><img src="assets/mushola.jpg" alt="Fasilitas mushola dan toilet" loading="lazy"><p>Mushola & Restroom</p></article>
+      </div>
+    </section>
+
+    <section id="menu-lengkap" class="menu-section">
+      <div class="section-container">
+        <div class="section-heading">
+          <p class="eyebrow">Made with love, served with joy</p>
+          <h2>Daftar Menu</h2>
+          <p class="subtitle">Pilih menu favoritmu, atur jumlahnya, lalu lihat ringkasan pesanan di keranjang.</p>
         </div>
-        <div class="gallery-item">
-          <img
-            src="assets/convex-mirror.jpg"
-            alt="Spot Cermin Cembung Outdoor"
-            loading="lazy"
-          />
-          <p>Outdoor Convex Mirror</p>
+
+        <div class="menu-toolbar">
+          <label class="search-box">
+            <span aria-hidden="true">⌕</span>
+            <input id="menuSearch" type="search" placeholder="Cari makanan atau minuman..." autocomplete="off">
+          </label>
+          <div class="category-filters" id="categoryFilters" aria-label="Filter kategori menu"></div>
         </div>
-        <div class="gallery-item">
-          <img
-            src="assets/indoor.jpg"
-            alt="Area Indoor DIPI CAFE"
-            loading="lazy"
-          />
-          <p>Cozy Indoor Space</p>
+
+        <div class="menu-results-line">
+          <span id="menuResultCount">Memuat menu...</span>
+          <span>Harga dalam Rupiah</span>
         </div>
-        <div class="gallery-item">
-          <img
-            src="assets/outdoor.jpg"
-            alt="Area Outdoor Malam"
-            loading="lazy"
-          />
-          <p>Chill Outdoor Vibes</p>
-        </div>
-        <div class="gallery-item">
-          <img
-            src="assets/clean.jpg"
-            alt="Kebersihan Area Cafe"
-            loading="lazy"
-          />
-          <p>Clean & Comfy Area</p>
-        </div>
-        <div class="gallery-item">
-          <img
-            src="assets/mushola.jpg"
-            alt="Fasilitas Mushola dan Toilet"
-            loading="lazy"
-          />
-          <p>Mushola & Restroom</p>
+        <div class="menu-grid" id="menuGrid" aria-live="polite"></div>
+
+        <div class="order-hint">
+          <span class="hint-icon">✦</span>
+          <p><strong>Sudah menentukan pilihan?</strong><br>Tekan tombol “Tambah” pada menu. Pesananmu akan masuk ke keranjang dan diskon dihitung otomatis.</p>
+          <button class="text-button" id="openCartFromHint">Lihat keranjang →</button>
         </div>
       </div>
     </section>
 
-    <!-- Section Buku Menu Gambar -->
-    <section id="menu-lengkap" class="section-container bg-light">
-      <h2>Daftar Menu Lengkap</h2>
-      <p class="subtitle">Intip pilihan makanan dan minuman andalan kami</p>
-
-      <div class="menu-gallery">
-        <div class="menu-card">
-          <img
-            src="assets/Meals.jpg"
-            alt="Menu Makanan & Cemilan DIPI CAFE"
-            loading="lazy"
-          />
+    <section class="menu-poster-section">
+      <div class="section-container poster-layout">
+        <div>
+          <p class="eyebrow">Menu at a glance</p>
+          <h2>Ingin melihat menu versi lengkap?</h2>
+          <p class="subtitle">Lihat kembali daftar menu dalam bentuk poster.</p>
         </div>
-        <div class="menu-card">
-          <img
-            src="assets/Drinks.jpg"
-            alt="Menu Minuman & Kopi DIPI CAFE"
-            loading="lazy"
-          />
+        <div class="poster-actions">
+          <a class="btn btn-dark" href="assets/Meals.jpg" target="_blank" rel="noopener">Menu Makanan ↗</a>
+          <a class="btn btn-dark" href="assets/Drinks.jpg" target="_blank" rel="noopener">Menu Minuman ↗</a>
         </div>
       </div>
     </section>
 
-    <!-- Section Sosial Media -->
-    <section id="sosmed" class="section-container">
-      <h2>Kunjungi Sosial Media Kami</h2>
-      <p class="subtitle">
-        Ikuti update promo terbaru dan keseruan lainnya di Instagram dan TikTok DIPI CAFE.
-      </p>
-
-      <div class="social-container">
-        <a
-          href="https://instagram.com/dipi.cafe"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn btn-ig"
-        >
-          Instagram @dipi.cafe
-        </a>
-        <a
-          href="https://tiktok.com/@dipi.cafe"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn btn-tiktok"
-        >
-          TikTok @dipi.cafe
-        </a>
+    <section id="lokasi" class="section-container location-section">
+      <div class="section-heading">
+        <p class="eyebrow">Come and say hello</p>
+        <h2>Temukan DIPI CAFE</h2>
+        <p class="subtitle">Mampir, nikmati suasananya, dan temukan menu favoritmu.</p>
+      </div>
+      <div class="location-card">
+        <div class="map-frame">
+          <iframe
+            title="Peta lokasi DIPI CAFE"
+            src="https://www.google.com/maps?q=-6.7078061,108.3192875&z=16&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="location-info">
+          <span class="location-pin">⌖</span>
+          <h3>DIPI CAFE</h3>
+          <p>Buka lokasi DIPI CAFE melalui Google Maps untuk melihat titik lokasi dan petunjuk arah.</p>
+          <a class="btn btn-primary" href="https://maps.app.goo.gl/mgQpqbLmeT6ursNa7" target="_blank" rel="noopener noreferrer">Buka di Google Maps ↗</a>
+        </div>
       </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-      <img src="assets/logo.jpg" alt="Logo DIPI CAFE" class="footer-logo" />
-      <p>
-        &copy; 2026 Ahmad Gifariya - Tugas Pengembangan Aplikasi Berbasis Web.
-      </p>
-    </footer>
-    
-    <script src="script.js"></script>
-  </body>
+    <section id="sosmed" class="social-section">
+      <div class="section-container">
+        <div class="section-heading">
+          <p class="eyebrow">Stay connected</p>
+          <h2>Ikuti & Hubungi Kami</h2>
+          <p class="subtitle">Ikuti update terbaru atau hubungi DIPI CAFE untuk bertanya dan melakukan booking.</p>
+        </div>
+        <div class="social-container">
+          <a href="https://instagram.com/dipi.cafe" target="_blank" rel="noopener noreferrer" class="social-link instagram"><span class="social-icon">◎</span><span><strong>Instagram</strong><small>@dipi.cafe</small></span><span class="social-arrow">↗</span></a>
+          <a href="https://tiktok.com/@dipi.cafe" target="_blank" rel="noopener noreferrer" class="social-link tiktok"><span class="social-icon">♪</span><span><strong>TikTok</strong><small>@dipi.cafe</small></span><span class="social-arrow">↗</span></a>
+          <a href="https://wa.me/6281510029720" target="_blank" rel="noopener noreferrer" class="social-link whatsapp"><span class="social-icon">◉</span><span><strong>WhatsApp</strong><small>Chat DIPI CAFE</small></span><span class="social-arrow">↗</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <img src="assets/logo.jpg" alt="Logo DIPI CAFE" class="footer-logo">
+    <p class="footer-brand">DIPI CAFE</p>
+    <p> Sip · Eat · Repeat </p>
+    <small>© 2026 Ahmad Gifariya — Tugas Pengembangan Aplikasi Berbasis Web.</small>
+  </footer>
+
+  <div class="cart-backdrop" id="cartBackdrop"></div>
+  <aside class="cart-panel" id="cartPanel" aria-label="Keranjang pesanan" aria-hidden="true">
+    <div class="cart-header">
+      <div><p class="eyebrow">Your selection</p><h2>Keranjang</h2></div>
+      <button class="icon-button" id="closeCartButton" aria-label="Tutup keranjang">×</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <div class="empty-cart"><span>🛍️</span><h3>Keranjang masih kosong</h3><p>Yuk, pilih menu favoritmu dulu.</p></div>
+    </div>
+    <div class="cart-summary">
+      <div class="summary-row"><span>Subtotal</span><strong id="cartSubtotal">Rp0</strong></div>
+      <div class="summary-row discount-row"><span>Diskon</span><strong id="cartDiscount">− Rp0</strong></div>
+      <div class="discount-note" id="discountNote">Belanja minimal Rp50.000 untuk mendapatkan diskon 5%.</div>
+      <div class="summary-total"><span>Total bayar</span><strong id="cartTotal">Rp0</strong></div>
+      <button class="btn btn-primary checkout-button" id="simulateOrderButton" disabled>Konfirmasi Simulasi Pesanan</button>
+      <button class="clear-cart-button" id="clearCartButton" disabled>Kosongkan keranjang</button>
+      <p class="cart-disclaimer">Ini merupakan simulasi pemesanan untuk keperluan website. Belum terhubung dengan pembayaran atau sistem pesanan kafe.</p>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
 </html>
